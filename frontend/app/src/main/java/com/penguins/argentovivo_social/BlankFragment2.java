@@ -14,6 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -84,7 +87,16 @@ public class BlankFragment2 extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        String[] myDataset = new String[]{"Giulio", "Giulio", "Giulio", "Giulio", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn", "Imgn",};
+        ArrayList<FeedImage> myDataset = new ArrayList<>();
+        myDataset.add(new FeedImage("Mario Rossi", "46.272166, 11.283434", BitmapFactory.decodeFile("/sdcard/bz_2.jpg"),BitmapFactory.decodeFile("/sdcard/bz_1.jpg"),28));
+        myDataset.add(new FeedImage("Giuseppe Verdi", "Bolzano", BitmapFactory.decodeFile("/sdcard/bz_3.jpg"), BitmapFactory.decodeFile("/sdcard/img_app.jpg"),128));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+        myDataset.add(new FeedImage("Giulio", "Trento", BitmapFactory.decodeFile("/sdcard/img_app.jpg"),BitmapFactory.decodeFile("/sdcard/img_app_2.png"),345));
+
         mAdapter = new MyAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
